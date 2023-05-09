@@ -1,0 +1,86 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+.header {
+    background-color: $instock-graphite;
+
+    &__div {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding: 1.6875rem 0rem;
+        display: flex;
+        flex-direction: column;
+        background-color: $instock-graphite;
+        padding-bottom: 5.35rem;
+
+        @include tablet {
+            padding: 1.6875rem 0rem;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 6.5rem;
+        }
+
+        @include desktop {
+            max-width: 80rem;
+        }
+    }
+
+    &__logo {
+        width: 8.036875rem;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+        box-sizing: content-box;
+
+        @include tablet {
+            padding-top: 0.68rem;
+            margin: 0 auto 0 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__nav {
+        margin: 0 auto;
+
+        @include tablet {
+            margin: 0 auto 0 0;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 2.25rem;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        width: 10.25rem;
+        height: 2.25rem;
+        box-sizing: border-box;
+        text-decoration: none;
+        padding-top: 0.5rem;
+        border-radius: 20px;
+        border: none;
+        color: $instock-white;
+        background-color: $instock-graphite;
+        font-size: $fs-mobile-buttons;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @include tablet {
+            width: 6.6875rem;
+            height: 2.375rem;
+            font-size: $fs-desktop-buttons;
+        }
+    }
+
+    &__button:focus {
+        background-color: $instock-black;
+    }
+}

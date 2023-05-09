@@ -1,0 +1,12 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.inventory-list {
+    padding: 0;
+    border-top: solid 1px $instock-cloud;
+
+    @include tablet{
+        border-top: none;
+    }
+}
